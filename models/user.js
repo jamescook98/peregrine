@@ -16,8 +16,20 @@ module.exports = function(sequelize, DataTypes) {
     password: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    userName: {
+      type: DataTypes.STRING(30),
+      allowNull: false
     }
   });
+
+  //Associate User with UserPost: one to many relationship
+  User.associate = function(models){
+    User.hasMany(models.UserPost, {
+      onDelete: "cascade"
+    });
+  };
+
   // Creating a custom method for our User model. This will check if an unhashed password entered by the user can be compared to the hashed password stored in our database
   User.prototype.validPassword = function(password) {
     return bcrypt.compareSync(password, this.password);
@@ -31,5 +43,6 @@ module.exports = function(sequelize, DataTypes) {
       null
     );
   });
+  console.log("The Use = ", User);
   return User;
 };

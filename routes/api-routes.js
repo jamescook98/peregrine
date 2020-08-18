@@ -1,6 +1,7 @@
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
+const { reporters } = require("mocha");
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -30,32 +31,7 @@ module.exports = function(app) {
         res.status(401).json(err);
       });
   });
-  //Temporary post route until we have more info
-  app.post("/api/user-post", (req, res) => {
-    db.UserPost.create({
-      postLocation: req.body.postLocation,
-      postTitle: req.body.postTitle,
-      postBody: req.body.postBody,
-      postTags: req.body.postTags,
-      userRating: req.body.userRating,
-      imgFilepath: req.body.imgFilepath
-    })
-      .then(() => {
-        //temporary until we have a page destination
-        res.json({
-          postLocation: req.body.postLocation,
-          postTitle: req.body.postTitle,
-          postBody: req.body.postBody,
-          postTags: req.body.postTags,
-          userRating: req.body.userRating,
-          imgFilepath: req.body.imgFilepath
-        });
-      })
-      .catch(err => {
-        res.status(401).json(err);
-      });
-  });
-
+  
   // Route for logging user out
   app.get("/logout", (req, res) => {
     req.logout();

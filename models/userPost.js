@@ -16,6 +16,14 @@ module.exports = function(sequelize, DataTypes) {
       postTags: {
           type: DataTypes.STRING,
           allowNull: true 
+      },
+      userRating: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+      },
+      imgFilepath: {
+        type: DataTypes.STRING(160),
+        allowNull: true
       }
     });
   

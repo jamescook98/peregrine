@@ -18,8 +18,6 @@ module.exports = function(app) {
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
   // otherwise send back an error
   app.post("/api/signup", (req, res) => {
-    console.log("the req = ", req);
-    console.log("the res = ", res);
     db.User.create({
       email: req.body.email,
       password: req.body.password,
@@ -27,6 +25,31 @@ module.exports = function(app) {
     })
       .then(() => {
         res.redirect(307, "/api/login");
+      })
+      .catch(err => {
+        res.status(401).json(err);
+      });
+  });
+  //Temporary post route until we have more info
+  app.post("/api/user-post", (req, res) => {
+    db.UserPost.create({
+      postLocation: req.body.postLocation,
+      postTitle: req.body.postTitle,
+      postBody: req.body.postBody,
+      postTags: req.body.postTags,
+      userRating: req.body.userRating,
+      imgFilepath: req.body.imgFilepath
+    })
+      .then(() => {
+        //temporary until we have a page destination
+        res.json({
+          postLocation: req.body.postLocation,
+          postTitle: req.body.postTitle,
+          postBody: req.body.postBody,
+          postTags: req.body.postTags,
+          userRating: req.body.userRating,
+          imgFilepath: req.body.imgFilepath
+        });
       })
       .catch(err => {
         res.status(401).json(err);

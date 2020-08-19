@@ -43,6 +43,5 @@ module.exports = function(sequelize, DataTypes) {
       null
     );
   });
-  console.log("The Use = ", User);
   return User;
 };

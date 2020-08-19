@@ -7,15 +7,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <!-- Bulma -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    
     <!-- Stylesheet -->
     <link rel="stylesheet" href="public/stylesheets/style.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
     <title>Peregrine</title>
 </head>
-<body class="indexBod">
-  
+<body class="indexBod"> 
 
     <div class="ui container">
       <button class="ui left floated white basic button">Home</button>
@@ -26,28 +28,111 @@
     <div id="main">
       <h5>Peregrine</h5>
       <h2>Find your wanderlust.</h2>
-      <div class="ui huge grey basic button" id="explore">Explore <i class="right arrow icon"></i></div>
-    </div>
-    
-
-    <footer class="footer">
-      <div class="content has-text-centered">
-        <p>
-          <strong>Inspired by Margaret</strong> 
-        </p>
+      <div class="ui search">
+        <input class="prompt" type="text" placeholder="Search a location...">
+        <div class="results"></div>
       </div>
-    </footer>    
-          
+      <h6>Or submit a review!</h6>
+      <div class="ui large grey basic button" id="submit">Submit <i class="right arrow icon"></i></div>
+    </div>
+
+    <div class="ui four cards">
+      <div class="card">
+        <div class="image">
+          <img src ="./images/2LABurrito.jpg">
+        </div>
+        <div class="extra">
+          Rating:
+          <div class="ui star rating" data-rating="4"></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="image">
+          <img src ="./images/16roundabout.jpg">
+        </div>
+        <div class="extra">
+          Rating:
+          <div class="ui star rating" data-rating="2"></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="image">
+          <img src = "./images/18HighwayRestaurant.jpg">
+        </div>
+        <div class="extra">
+          Rating:
+          <div class="ui star rating" data-rating="3"></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="image">
+          <img src ="./images/1TacoBurritoExpress.jpg">
+        </div>
+        <div class="extra">
+          Rating:
+          <div class="ui star rating" data-rating="4"></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="image">
+          <img src = "./images/8StoneForest.jpg">
+        </div>
+        <div class="extra">
+          Rating:
+          <div class="ui star rating" data-rating="3"></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="image">
+          <img src = "./images/7Jiuzhaigou.jpg">
+        </div>
+        <div class="extra">
+          Rating:
+          <div class="ui star rating" data-rating="3"></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="image">
+          <img src = "./images/9MortonArboretum.jpg">
+        </div>
+        <div class="extra">
+          Rating:
+          <div class="ui star rating" data-rating="4"></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="image">
+          <img src = "./images/4Saltgrass.jpg">
+        </div>
+        <div class="extra">
+          Rating:
+          <div class="ui star rating" data-rating="4"></div>
         </div>
       </div>
     </div>
+
+    
+
+    
   </div>
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Inspired by Margaret</strong> 
+      </p>
+    </div>
+  </footer>  
+   
 </div>
+
 
 
 
 
      
 </body>
+<script type="text/javascript">
+  $(document).ready(function(){$(".rating").rating();});
+</script>
   
 </html>

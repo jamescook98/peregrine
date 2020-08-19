@@ -7,3 +7,17 @@ input,
 label {
     margin: .4rem 0;
 }
+.indexBod{
+    background: linear-gradient(to bottom, #339966 4%, #ccffcc 98%);
+}
+.ui.container{
+    margin-top:10px;
+}
+
+.ui.form {
+    margin-top: 10px;
+}
+
+.ui.button {
+    margin-top: 20px;
+}

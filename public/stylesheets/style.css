@@ -6,7 +6,7 @@ form.login {
   background: linear-gradient(to bottom, #339966 4%, #ccffcc 98%);
 }
 .ui.container{
-  margin-top:10px;
+  margin-top:5px;
 }
 #main{
   margin: 200px auto auto auto;
@@ -23,6 +23,10 @@ h2{
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
   font-size: 2.5rem;
+}h6{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 2.5rem;
 }
 #explore{
   margin-top:30px;
@@ -31,6 +35,28 @@ h2{
 p{
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
+}
+
+.ui.medium.images {
+  float: center;
+  margin-left: 20px;
+}
+
+.ui.search {
+  margin-top: 30px;
+  margin-bottom: 25px;
+}
+.ui.button {
+  margin-top: 20px;
+  margin-bottom: 150px
+}
+
+.ui.four.cards {
+  margin: 20px;
+}
+
+.footer {
+  margin-top: 10px;
 }
 /* font-family: 'Montserrat', sans-serif;
 font-family: 'Raleway', sans-serif; */

@@ -7,6 +7,7 @@
     <link href="stylesheets/post.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <script src="js/post.js"></script>
     <title>Document</title>
 </head>
 <body class="indexBod">
@@ -18,35 +19,45 @@
             <button class="ui right floated white basic button">Sign Up</button>
         </div>
         <div class="column">
-            <form action="/action_page.php">
+            <!-- <form action="/action_page.php">
                 <label for="img">Select image:</label>
                 <input type="file" id="img" name="img" accept="image/*">
                 <input type="submit">
-            </form>
+            </form> -->
     
             <div class="ui form">
                 <div class="field">
+                    <label for="img">Select image</label>
+                    <input type="file" id="img" name="img" accept="image/*">
+                </div>
+                <div class="field">
                   <label>Name</label>
-                  <input type="text">
+                  <input type="text" id="post-title">
                 </div>
             </div>
             <div class="ui form">
             <div class="field">
                   <label>Location</label>
-                  <input type="text">
+                  <input type="text" id="post-location">
                 </div>
             </div>
             <h2>Rating</h2>
-            <div class="ui star rating" data-rating="3"></div>
+            <div class="ui star rating" data-rating="3" id="post-rating"></div>
 
             <div class="ui form">
                 <div class="field">
-                  <label>Review Text</label>
-                  <textarea></textarea>
+                  <label>Review Text:</label>
+                  <textarea id="post-body"></textarea>
                 </div>
             </div>
-
-            <button class="ui button">Submit</button>
+            <div class="ui form">
+                <div class="field">
+                    <label>Tags</label>
+                    <input type="text" id="post-tags">
+                </div>
+            </div>
+            
+            <button class="ui button" id="new-post-submit">Submit:</button>
 
 
             

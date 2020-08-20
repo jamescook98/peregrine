@@ -20,20 +20,30 @@
 <body class="indexBod"> 
 
     <div class="ui container">
-      <button class="ui left floated white basic button">Home</button>
-      <button class="ui right floated white basic button">Log In</button>
-      <button class="ui right floated white basic button">Sign Up</button>
+      <button class="ui left floated white basic button">
+        <a class="active item">Home</a>
+      </button>
+      <button class="ui right floated white basic button">
+        <a class="item" href="./public/login.html">Log in</a>
+      </button>
+      <button class="ui right floated white basic button">
+        <a class="item" href="./public/signup.html">Sign up</a>
+      </button>
+
     </div>
       
     <div id="main">
       <h5>Peregrine</h5>
       <h2>Find your wanderlust.</h2>
       <div class="ui search">
-        <input class="prompt" type="text" placeholder="Search a location...">
+        <input class="prompt" type="text" placeholder="Common passwords...">
         <div class="results"></div>
+        <button class="ui button">
+          <a class="item" href="reviews.html">Submit</a>
+        </button>
       </div>
       <h6>Or submit a review!</h6>
-      <div class="ui large grey basic button" id="submit">Submit <i class="right arrow icon"></i></div>
+      <div class="ui large grey basic button" id="submit"><a class="item" href="./public/post.html">Submit</a> <i class="right arrow icon"></i></div>
     </div>
 
     <div class="ui four cards">
@@ -128,6 +138,8 @@
 </body>
 <script type="text/javascript">
   $(document).ready(function(){$(".rating").rating();});
+  $('.ui.modal')
+  .modal('show');
 </script>
   
 </html>

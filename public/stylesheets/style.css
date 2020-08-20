@@ -47,8 +47,11 @@ p{
   margin-bottom: 25px;
 }
 .ui.button {
-  margin-top: 20px;
-  margin-bottom: 150px
+  margin-left: 20px;
+}
+
+ui.large.grey.basic.button {
+  margin-bottom: 150px;
 }
 
 .ui.four.cards {

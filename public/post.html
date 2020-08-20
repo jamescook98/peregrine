@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <link href="stylesheets/post.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
     <title>Document</title>
 </head>
 <body class="indexBod">
@@ -34,18 +36,22 @@
                   <input type="text">
                 </div>
             </div>
+            <h2>Rating</h2>
+            <div class="ui star rating" data-rating="3"></div>
+
             <div class="ui form">
                 <div class="field">
                   <label>Review Text</label>
                   <textarea></textarea>
                 </div>
             </div>
-            
 
             <button class="ui button">Submit</button>
 
+
             
         </div>
+        
 
         
     
@@ -54,5 +60,8 @@
 
     
 </body>
+<script type="text/javascript">
+    $(document).ready(function(){$(".rating").rating();});
+</script>
 
 </html>

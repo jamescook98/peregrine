@@ -1,48 +1,57 @@
 $(document).ready(() => {
-    $('#searchIndex').on('submit', (event) => {
-      let searchMain = $('#searchMain').val();
-      // window.location.replace("reviews.html");
-      // console.log(searchMain);
-      sessionStorage.setItem('searchText', searchMain);
-      let temp = sessionStorage.getItem('searchText');
-      console.log(temp);
-      window.location = ('reviews.html')
-      event.preventDefault();
-    });
+  $('#searchIndex').on('submit', (event) => {
+    let searchMain = $('#searchMain').val();
+    // window.location.replace("reviews.html");
+    // console.log(searchMain);
+    sessionStorage.setItem('searchText', searchMain);
+    let temp = sessionStorage.getItem('searchText');
+    console.log(temp);
+    window.location = ('reviews.html')
+    event.preventDefault();
+  });
 });
 
 function getReviewInfo() {
-    // console.log('feed in from index.html ' + searchText);
-    let searchText = sessionStorage.getItem('searchText');
+  // console.log('feed in from index.html ' + searchText);
+  let searchText = sessionStorage.getItem('searchText');
+  //api to get user's review posts
+  // const queryUrl = "/api/search/" + searchText;
+  $.get(`/api/search/${searchText}`, (data) => {
+    console.log(data);
+    
+    let rowsToAdd = [];
+    for (let i = 0; i < data.length; i++) {
+      var imgsURL = data[i].imgFilepath;
+      var userPic = $('<img>').attr("src", imgsURL).width('400px').height('400px');
+      var userPostRating = data[i].userRating;
+      var userPostBody = data[i].postBody;
+      var userPostLocation = data[i].postLocation;
+      var userPostTitle = data[i].postTitle;
+      var userPostupdatedAt = data[i].updatedAt;
+      $('#userPostsDB').append(userPic, userPostRating, userPostBody, userPostLocation, userPostTitle, userPostupdatedAt);
+    }
+  });
 
-    //api to get user's review posts
-    $.get("api/posts", (data)=>{
-      if (data) {
-        console.log(data);
+  //Yelp api call to get restaurant info...
+  var settings = {
+    "url": `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=food&location=${searchText}`,
+    "method": "GET",
+    "sort_by": "review_count",
+    "timeout": 0,
+    "headers": {
+      "Authorization": "Bearer BdJJtqLJAbXg46LvAvsUxVIFGDcTm1OLpdNFVi3c47LfyPltqjhffRyvyUCd0IPXhZuG3N2KOrn0faY1QG0lK412AkBNE9zFsAhYc1MgntcV7V0_veyQD9Aytqo0X3Yx",
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*'
+    },
+  };
 
-      }
-    });
-
-    //Yelp api call to get restaurant info...
-    var settings = {
-      "url": `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=food&location=${searchText}`,
-      "method": "GET",
-      "sort_by": "review_count",
-      "timeout": 0,
-      "headers": {
-        "Authorization": "Bearer BdJJtqLJAbXg46LvAvsUxVIFGDcTm1OLpdNFVi3c47LfyPltqjhffRyvyUCd0IPXhZuG3N2KOrn0faY1QG0lK412AkBNE9zFsAhYc1MgntcV7V0_veyQD9Aytqo0X3Yx",
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
-      },
-    };
-  
-    $.ajax(settings).done(function (response) {
-      console.log(response);
-      let restaurants = response.businesses;
-      let output = '';
-      $.each(restaurants, (index, restaurant) => {
-        output += `
+  $.ajax(settings).done(function (response) {
+    console.log(response);
+    let restaurants = response.businesses;
+    let output = '';
+    $.each(restaurants, (index, restaurant) => {
+      output += `
                 <div class="col-md-3">
                 <div class="well text-center">
                   <img src="${restaurant.image_url}">
@@ -54,9 +63,9 @@ function getReviewInfo() {
                 </div>
               </div>
                 `;
-      });
-      $('#yelp').html(output);
-    }).catch((err) => {
-      console.log(err);
     });
-  }
+    $('#yelp').html(output);
+  }).catch((err) => {
+    console.log(err);
+  });
+}

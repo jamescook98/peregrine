@@ -1,4 +1,14 @@
 $(document).ready(() => {
+
+  $('#searchYelpButton').on('click', (e)=>{
+    e.preventDefault();
+    let searchText = $('#searchText').val();
+    if (searchText == "") {
+      searchText = 'New York, NY';
+    }
+    getYelpInfo(searchText);
+  });
+
   $('#searchForm').on('submit', (e) => {
     let searchText = $('#searchText').val();
     if (searchText == "") {

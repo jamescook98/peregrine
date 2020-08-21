@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
   <!-- Stylesheet -->
   <link rel="stylesheet" href="./stylesheets/style.css">
-    
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -18,7 +18,7 @@
   <title>Document</title>
 </head>
 
-<body class ="indexBod">
+<body class="indexBod">
   <div class="ui container">
     <button class="ui left floated white basic button">
       <a class="item" href="./index.html">Home</a>
@@ -35,14 +35,20 @@
   <div id="main">
     <h4 class="ui header">YELP References</h4>
     <h3 class="text-center">Search Restaurants And Activities By Location</h3>
-    <form id="searchForm" class ="ui search">
+    <form id="searchForm" class="ui search">
       <input type="text" class="form-control" id="searchText" placeholder="New York, NY">
     </form>
-    
-    <form id="searchMore">
 
-      <input type="text" class="form-control" id="searchTodo" placeholder="What to do? ">
-    </form> 
+    <form id="searchMore">
+      <input type="text" class="form-control" id="searchTodo" placeholder="What Activities?">
+    </form>
+    <button class="ui primary button" id="searchYelpButton">
+      Submit
+    </button>
+  </div>
+
+  <div class="container">
+    <div id="userPostsDB" class="row"></div>
   </div>
   <div class="container">
     <div id="yelp" class="row"></div>
@@ -51,17 +57,14 @@
 
 
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="js/yelpAPI.js"></script>
-<script src="js/main.js"></script>
-<script>
-  getReviewInfo();
-</script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="js/yelpAPI.js"></script>
+  <!-- <script src="js/main.js"></script> -->
+  <script>
+    getReviewInfo();
+  </script>
 </body>
 
 </html>
-
-      
-

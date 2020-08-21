@@ -15,7 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
-
+  <script src="js/search.js"></script>
   <title>Peregrine</title>
 </head>
 
@@ -39,19 +39,19 @@
     <h2>Find your wanderlust.</h2>
     <div class="ui search">
       <form id="searchIndex" class=" ui search">
-        <input class="prompt" type="text" id="searchMain" placeholder="Search anything...">
+        <input class="prompt" type="text" id="home-search" placeholder="Search anything...">
       </form>
       <div class="results"></div>
-      <!-- <button class="ui button">
-          <a class="item" href="reviews.html">Submit</a>
-        </button> -->
+      <button class="ui button" id="peregrineDB-search">
+        Submit 
+      </button>
     </div>
     <h6>Or submit a review!</h6>
     <div class="ui large inverted button" id="submit"><a class="item" href="post.html">Submit</a> <i
         class="right arrow icon"></i></div>
   </div>
 
-  <div class="ui four cards">
+  <div class="ui four cards" id="peregrine-results">
     <div class="card">
       <div class="image">
         <img src="./images/2LABurrito.jpg">

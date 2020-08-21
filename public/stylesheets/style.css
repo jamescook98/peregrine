@@ -67,9 +67,41 @@ ui.large.grey.basic.button {
 /* font-family: 'Montserrat', sans-serif;
 font-family: 'Raleway', sans-serif; */
 
+/* /start of yelp css */
+.container {
+  width: 650px;
+}
+
+.ui.primary.button {
+  margin-bottom: 100px;
+}
+
+h11 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 4rem;
+}
+
+#searchMore {
+  margin-bottom: 25px;
+}
 
 #yelp img, #yelp img{
   width:100%;
+}
+#yelp {
+  font-size: small;
+  
+}
+h8{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+h7{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
 }
 
 @media(min-width:960px){

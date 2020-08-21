@@ -33,8 +33,10 @@
   </div>
 
   <div id="main">
-    <h4 class="ui header">YELP References</h4>
-    <h3 class="text-center">Search Restaurants And Activities By Location</h3>
+    <div class="ui header">
+      <h11>YELP References</h11>
+    </div>
+    <div class="text-center">Search Restaurants And Activities By Location</div>
     <form id="searchForm" class ="ui search">
       <input type="text" class="form-control" id="searchText" placeholder="New York, NY">
     </form>
@@ -43,11 +45,17 @@
 
       <input type="text" class="form-control" id="searchTodo" placeholder="Museum bowling Starbucks">
     </form> 
+    <button class="ui primary button">
+      Submit
+    </button>
   </div>
-  <div class="container">
-    <div id="yelp" class="row"></div>
+  <div class="ui two column centered grid">
+    <div class="column">
+      <div class="container">
+        <div id="yelp" class="row"></div>
+      </div>
+    </div>
   </div>
-
 
 
 

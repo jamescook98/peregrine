@@ -45,13 +45,13 @@ function getYelpInfo(searchText) {
     let output = '';
     $.each(restaurants, (index, restaurant) => {
       output += `
-              <div class="col-md-3">
+              <div class="col-md-8">
               <div class="well text-center">
-                <img src="${restaurant.image_url}">
-                <a href=${restaurant.url} target="_blank"><h5>${restaurant.name} </h5></a>
-                <h6>${restaurant.location.display_address}</h6>
-                <h6>Ratings= ${restaurant.rating} || Number of reviews= ${restaurant.review_count}</h6>
-                <h5>${restaurant.price}</h5>
+                <a href=${restaurant.url} target="_blank"><h7>${restaurant.name} </h7></a>
+                <img src="${restaurant.image_url}">  
+                <h8>${restaurant.location.display_address}</h8>
+                <h8>Ratings= ${restaurant.rating} || Number of reviews= ${restaurant.review_count}</h8>
+                <h8>${restaurant.price}</h8>
                 <a onclick="restaurantSelected('${restaurant.id}')" class="btn btn-primary" href="#">Restaurant details</a>
               </div>
             </div>
@@ -85,12 +85,12 @@ function getYelpTodo(searchTodo, searchLocation) {
     let output = '';
     $.each(activity, (index, activity) => {
       output += `
-              <div class="col-md-3">
+              <div class="col-md-8">
               <div class="well text-center">
                 <img src="${activity.image_url}">
-                <a href=${activity.url} target="_blank"><h5>${activity.name} </h5></a>
-                <h6>${activity.location.display_address}</h6>
-                <h6>Ratings= ${activity.rating} || Number of reviews= ${activity.review_count}</h6>
+                <a href=${activity.url} target="_blank"><h7>${activity.name} </h7></a>
+                <h8>${activity.location.display_address}</h8>
+                <h8>Ratings= ${activity.rating} || Number of reviews= ${activity.review_count}</h8>
                 <a onclick="restaurantSelected('${activity.id}')" class="btn btn-primary" href="#">Activity details</a>
               </div>
             </div>
@@ -134,7 +134,7 @@ function getRestaurant() {
       console.log('response for review.url' + reviews.url);
       output += `
             <div class="row">
-              <div class="col-md-4">
+              <div class="col-md-3">
               <img src="${reviews.user.image_url}" class="img-thumbnail">
               </div>
               <div class="col-md-8">

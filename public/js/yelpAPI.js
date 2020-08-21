@@ -1,12 +1,17 @@
 $(document).ready(() => {
 
-  $('#searchYelpButton').on('click', (e)=>{
+  $('#searchYelpButton').on('click', (e) => {
     e.preventDefault();
     let searchText = $('#searchText').val();
+    let searchTodo = $('#searchTodo').val();
     if (searchText == "") {
       searchText = 'New York, NY';
     }
-    getYelpInfo(searchText);
+    if (searchTodo == "") {
+      searchTodo = 'food';
+    }
+    console.log("BUTTON search text --- " + searchText + " at todo " + searchTodo);
+    getYelpTodo(searchTodo, searchText);
   });
 
   $('#searchForm').on('submit', (e) => {
@@ -22,7 +27,7 @@ $(document).ready(() => {
     event.preventDefault();
     let searchTodo = $('#searchTodo').val();
     let searchLocation = $('#searchText').val();
-    if (searchTodo ==""){
+    if (searchTodo == "") {
       searchTodo = 'sightseeing';
     }
     if (searchLocation == "") {

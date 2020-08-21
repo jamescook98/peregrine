@@ -9,6 +9,7 @@ $(document).ready(() => {
   });
 
   $('#searchMore').on('submit', (event) => {
+    event.preventDefault();
     let searchTodo = $('#searchTodo').val();
     let searchLocation = $('#searchText').val();
     if (searchTodo ==""){
@@ -19,7 +20,6 @@ $(document).ready(() => {
     }
     console.log("search Todo --- " + searchTodo + " at location " + searchLocation);
     getYelpTodo(searchTodo, searchLocation);
-    event.preventDefault();
   });
 
 });
@@ -48,10 +48,10 @@ function getYelpInfo(searchText) {
               <div class="col-md-3">
               <div class="well text-center">
                 <img src="${restaurant.image_url}">
-                <a href=${restaurant.url} target="_blank"><h5>${restaurant.name} </h5></a>
-                <h6>${restaurant.location.display_address}</h6>
-                <h6>Ratings= ${restaurant.rating} || Number of reviews= ${restaurant.review_count}</h6>
-                <h5>${restaurant.price}</h5>
+                <a href=${restaurant.url} target="_blank"><h7>${restaurant.name} </h7></a>
+                <h4>${restaurant.location.display_address}</h4>
+                <h4>Ratings= ${restaurant.rating} || Number of reviews= ${restaurant.review_count}</h4>
+                <h7>${restaurant.price}</h7>
                 <a onclick="restaurantSelected('${restaurant.id}')" class="btn btn-primary" href="#">Restaurant details</a>
               </div>
             </div>
@@ -88,9 +88,9 @@ function getYelpTodo(searchTodo, searchLocation) {
               <div class="col-md-3">
               <div class="well text-center">
                 <img src="${activity.image_url}">
-                <a href=${activity.url} target="_blank"><h5>${activity.name} </h5></a>
-                <h6>${activity.location.display_address}</h6>
-                <h6>Ratings= ${activity.rating} || Number of reviews= ${activity.review_count}</h6>
+                <a href=${activity.url} target="_blank"><h7>${activity.name} </h7></a>
+                <h4>${activity.location.display_address}</h4>
+                <h4>Ratings= ${activity.rating} || Number of reviews= ${activity.review_count}</h4>
                 <a onclick="restaurantSelected('${activity.id}')" class="btn btn-primary" href="#">Activity details</a>
               </div>
             </div>
@@ -148,7 +148,7 @@ function getRestaurant() {
             </div>
             <div class="row">
               <div class="well">
-                <h5>Reviews: </h5>
+                <h7>Reviews: </h7>
                 ${reviews.text}
                 <hr>
                 <a href=${reviews.url} target="_blank" class="btn btn-primary">View On Yelp</a>

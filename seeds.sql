@@ -1,3 +1,28 @@
+
+INSERT INTO peregrinedb.users (userName, password, email, createdAt, updatedAt)
+VALUES ("nicolegraiff", "nicole10", "nicole.graiff@gmail.com",CURRENT_TIMESTAMP,CURRENT_TIMESTAMP),
+        ("mikelee", "25mike", "mikewclee@gmail.com", CURRENT_TIMESTAMP,CURRENT_TIMESTAMP),
+        ("dominikaperkowsa", "dominika43", "dominikaperkowska@gmail.com", CURRENT_TIMESTAMP,CURRENT_TIMESTAMP),
+        ("maryjones", "jones46", "jones@gmail.com", CURRENT_TIMESTAMP,CURRENT_TIMESTAMP),
+        ("tomsmith", "toms17", "toms@gmail.com", CURRENT_TIMESTAMP,CURRENT_TIMESTAMP),
+        ("janemoore", "moore27", "janemoore@gmail.com", CURRENT_TIMESTAMP,CURRENT_TIMESTAMP),
+        ("katenunan", "kate30", "knunan@gmail.com", CURRENT_TIMESTAMP,CURRENT_TIMESTAMP),
+        ("richardmellon", "mellowmellon", "mellow@gmail.com", CURRENT_TIMESTAMP,CURRENT_TIMESTAMP),
+        ("ulrikahasse", "ulli39", "ullihasse@gmail.com", CURRENT_TIMESTAMP,CURRENT_TIMESTAMP),
+        ("tedrichter", "ted32", "richter@gmail.com", CURRENT_TIMESTAMP,CURRENT_TIMESTAMP),
+        ("marnieharrison", "marnie35", "mharrison@gmail.com", CURRENT_TIMESTAMP,CURRENT_TIMESTAMP),
+        ("nelsonyates", "nyates57", "nelsony@gmail.com", CURRENT_TIMESTAMP,CURRENT_TIMESTAMP),
+        ("jacobmiller", "miller892", "jmiller@gmail.com", CURRENT_TIMESTAMP,CURRENT_TIMESTAMP)
+
+INSERT INTO peregrinedb.userPosts (postLocation, createdAt, postTitle, postBody, postTags, userRating, imgFilepath, updatedAt, UserId)
+VALUES ("Irving, Texas, United States", "2020-08-13 09:14:18", "Saltgrass Steak House", "Saltgrass is a great place for everyone; you would feel comfortable with young kids or on a date.  Stop by before 6pm to get the early bird discount.", "irving,texas,saltgrass,steak,house,saltgrass-steak-house,restaurant",5,"./public/images/4Saltgrass.jpg", CURRENT_TIMESTAMP, 1),
+       ("Chicago, Illinois, United States", "2020-08-13 09:15:38", "Ed Debevic's", "Prepare for a unique dining experience.  Seriously, prepare.  In good-natured fun, your waiter will wear vintage clothes, insult you, and not thank you for your order (the sass part of its appeal), but he will bring you delicious diner food.","chicago,ed,debevic,ed-debevic,restaurant",4,"./public/images/5EdDebevics.jpg", CURRENT_TIMESTAMP, 1),
+       ("Jiuzhaigou, Sichuan, China", "2020-08-13 09:17:13", "Jiuzhaigou National Park", "Take the bus up to the start of the Yangtze River and take your time exploring as you walk down the mountain.  The bus ticket allows you to hop on-and-off as you wish.","sichuan,china,jiuzhaigou,national,park,jiuzhaigou-national-park",5,"./public/images/7Jiuzhaigou.jpg", CURRENT_TIMESTAMP, 1),
+       ("Kunming, Yunnan, China", "2020-08-13 09:18:31", "Stone Forest", "The Stone Forest is well worth the bus journey out from downtown (or you can spend a little more to take the high-speed train for a 20 minute ride).  You will see one of the natural wonders of the world.", "kunming,yunnan,china,stone,stone,stone-forest",5,"./public/images/8StoneForest.jpg", CURRENT_TIMESTAMP, 1),
+       ("Chicago, Illinois, United States", "2020-08-13 09:20:43", "Leona's Pizzeria & Restaurant", "Leona's is a great local Italian restaurant.  Pizza? Pasta? Salad? Entree?  Take your pick and you won't be disappointed.", "leona's,pizzeria,restaurant,leona's-pizzeria-restaurant",4,"./public/images/10Leona.jpg", CURRENT_TIMESTAMP, 1),
+       ("Beijing, Beijing, China","2020-08-13 09:21:21", "Muse", "Muse has great food, fast service, and a nice atmosphere, whether you want to park with your laptop for awhile or just stop in for a quick bite.  The Vietnamese sandwiches, special coffee, papaya salad, summer rolls, and pho are all favorites.","beijing,china,muse,restaurant",4,"./public/images/11Muse.jpg", CURRENT_TIMESTAMP, 1)
+
+
 INSERT INTO user (userName, userPassword, userEmail)
 VALUES ("jamescook", "password12345", "cookjamesarthur@gmail.com");
 

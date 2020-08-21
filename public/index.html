@@ -1,152 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Semantic -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
-    <!-- Bulma -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
-    
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="./stylesheets/style.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Semantic -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+  <!-- Bulma -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
 
-    <title>Peregrine</title>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./stylesheets/style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+  <title>Peregrine</title>
 </head>
-<body class="indexBod"> 
 
-    <div class="ui container">
-      <button class="ui left floated inverted button">
-        <a class="item" href="./index.html">Home</a>
-      </button>
-      <button class="ui right floated inverted button">
-        <a class="item" href="./login.html">Log in</a>
-      </button>
-      <button class="ui right floated inverted button">
-        <a class="item" href="./signup.html">Sign up</a>
-      </button>
+<body class="indexBod">
 
-    </div>
-      
-    <div id="main">
-      <h5>Peregrine</h5>
-      <h2>Find your wanderlust.</h2>
-      <div class="ui search">
-        <input class="prompt" type="text" placeholder="Search anything...">
-        <div class="results"></div>
-        <button class="ui button">
+  <div class="ui container">
+    <button class="ui left floated inverted button">
+      <a class="item" href="./index.html">Home</a>
+    </button>
+    <button class="ui right floated inverted button">
+      <a class="item" href="./login.html">Log in</a>
+    </button>
+    <button class="ui right floated inverted button">
+      <a class="item" href="./signup.html">Sign up</a>
+    </button>
+
+  </div>
+
+  <div id="main">
+    <h5>Peregrine</h5>
+    <h2>Find your wanderlust.</h2>
+    <div class="ui search">
+      <form id="searchIndex" class=" ui search">
+        <input class="prompt" type="text" id="searchMain" placeholder="Search anything...">
+      </form>
+      <div class="results"></div>
+      <!-- <button class="ui button">
           <a class="item" href="reviews.html">Submit</a>
-        </button>
-      </div>
-      <h6>Or submit a review!</h6>
-      <div class="ui large inverted button" id="submit"><a class="item" href="post.html">Submit</a> <i class="right arrow icon"></i></div>
+        </button> -->
     </div>
+    <h6>Or submit a review!</h6>
+    <div class="ui large inverted button" id="submit"><a class="item" href="post.html">Submit</a> <i
+        class="right arrow icon"></i></div>
+  </div>
 
-    <div class="ui four cards">
-      <div class="card">
-        <div class="image">
-          <img src ="./images/2LABurrito.jpg">
-        </div>
-        <div class="extra">
-          Rating:
-          <div class="ui star rating" data-rating="4"></div>
-        </div>
-        <div class="ui popup">
-          <div class="header">User Rating</div>
-          <div class="ui star rating" data-rating="3"></div>
-        </div>
+  <div class="ui four cards">
+    <div class="card">
+      <div class="image">
+        <img src="./images/2LABurrito.jpg">
       </div>
-      <div class="card">
-        <div class="image">
-          <img src ="./images/16roundabout.jpg">
-        </div>
-        <div class="extra">
-          Rating:
-          <div class="ui star rating" data-rating="2"></div>
-        </div>
+      <div class="extra">
+        Rating:
+        <div class="ui star rating" data-rating="4"></div>
       </div>
-      <div class="card">
-        <div class="image">
-          <img src = "./images/18HighwayRestaurant.jpg">
-        </div>
-        <div class="extra">
-          Rating:
-          <div class="ui star rating" data-rating="3"></div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="image">
-          <img src ="./images/1TacoBurritoExpress.jpg">
-        </div>
-        <div class="extra">
-          Rating:
-          <div class="ui star rating" data-rating="4"></div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="image">
-          <img src = "./images/8StoneForest.jpg">
-        </div>
-        <div class="extra">
-          Rating:
-          <div class="ui star rating" data-rating="3"></div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="image">
-          <img src = "./images/7Jiuzhaigou.jpg">
-        </div>
-        <div class="extra">
-          Rating:
-          <div class="ui star rating" data-rating="3"></div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="image">
-          <img src = "./images/9MortonArboretum.jpg">
-        </div>
-        <div class="extra">
-          Rating:
-          <div class="ui star rating" data-rating="4"></div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="image">
-          <img src = "./images/4Saltgrass.jpg">
-        </div>
-        <div class="extra">
-          Rating:
-          <div class="ui star rating" data-rating="4"></div>
-        </div>
+      <div class="ui popup">
+        <div class="header">User Rating</div>
+        <div class="ui star rating" data-rating="3"></div>
       </div>
     </div>
+    <div class="card">
+      <div class="image">
+        <img src="./images/16roundabout.jpg">
+      </div>
+      <div class="extra">
+        Rating:
+        <div class="ui star rating" data-rating="2"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img src="./images/18HighwayRestaurant.jpg">
+      </div>
+      <div class="extra">
+        Rating:
+        <div class="ui star rating" data-rating="3"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img src="./images/1TacoBurritoExpress.jpg">
+      </div>
+      <div class="extra">
+        Rating:
+        <div class="ui star rating" data-rating="4"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img src="./images/8StoneForest.jpg">
+      </div>
+      <div class="extra">
+        Rating:
+        <div class="ui star rating" data-rating="3"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img src="./images/7Jiuzhaigou.jpg">
+      </div>
+      <div class="extra">
+        Rating:
+        <div class="ui star rating" data-rating="3"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img src="./images/9MortonArboretum.jpg">
+      </div>
+      <div class="extra">
+        Rating:
+        <div class="ui star rating" data-rating="4"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="image">
+        <img src="./images/4Saltgrass.jpg">
+      </div>
+      <div class="extra">
+        Rating:
+        <div class="ui star rating" data-rating="4"></div>
+      </div>
+    </div>
+  </div>
 
-    
 
-    
+
+
   </div>
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Inspired by Margaret</strong> 
+        <strong>Inspired by Margaret</strong>
       </p>
     </div>
-  </footer>  
-   
-</div>
+  </footer>
 
+  </div>
+
+  <script type="text/javascript">
+    $(document).ready(function () { $(".rating").rating(); });
+    $('.ui.modal')
+      .modal('show');
+    $('.boundary.example .button')
+    $('.activating.element')
+      .popup();
+  </script>
+  <script src="js/main.js"></script>
 </body>
-<script type="text/javascript">
-  $(document).ready(function(){$(".rating").rating();});
-  $('.ui.modal')
-  .modal('show');
-  $('.boundary.example .button')
-  $('.activating.element')
-  .popup();
-</script>
-  
+
 </html>

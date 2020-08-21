@@ -69,15 +69,28 @@ font-family: 'Raleway', sans-serif; */
 
 
 #yelp img, #yelp img{
-  width:100%;
+  width:auto;
 }
 
+#yelp .col-md-3 img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+#yelp .col-md-3 .well{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto
+}
 @media(min-width:960px){
   #yelp .col-md-3 .well{
+    justify-content: center;
     height: 390px;
   }
 
   #yelp .col-md-3 img{
+    justify-content: center;
     height:240px;
   }
 }

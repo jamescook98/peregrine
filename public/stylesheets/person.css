@@ -1,0 +1,19 @@
+.indexBod{
+    background: linear-gradient(to bottom, #339966 4%, #ccffcc 98%);
+}
+.ui.container{
+    margin-top:5px;
+}
+img {
+    height: 100px;
+    width: 100px;
+    float: left;
+}
+
+.content {
+    float: right;
+}
+
+.ui.two.column.centered.grid {
+    margin-top: 200px;
+}

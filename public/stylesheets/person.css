@@ -1,19 +1,29 @@
 .indexBod{
     background: linear-gradient(to bottom, #339966 4%, #ccffcc 98%);
 }
+
+a{
+    color:white;
+}
 .ui.container{
     margin-top:5px;
 }
 img {
-    height: 100px;
-    width: 100px;
+    height: 300px;
+    width: 300px;
     float: left;
+    margin-right: 15px;
 }
 
 .content {
-    float: right;
+    float: center;
 }
 
-.ui.two.column.centered.grid {
+.twelve.wide.column {
+    float: center;
     margin-top: 200px;
+}
+
+.ui.star.rating {
+    float: right;
 }

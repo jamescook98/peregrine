@@ -4,6 +4,7 @@ const { Op } = require("sequelize");
 module.exports = (app) => {
     //Temporary post route until we have more info  - verified via Postman
     app.post("/api/user-post", (req, res) => {
+        console.log(req);
         db.UserPost.create({
             postLocation: req.body.postLocation,
             postTitle: req.body.postTitle,

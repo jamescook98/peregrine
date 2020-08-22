@@ -35,9 +35,6 @@ $(document).ready(() => {
             $("<img>").attr("src", item.imgFilepath).appendTo(cardImg);
             const ratingDiv = $("<div>").attr("class", "extra").text("Rating").appendTo(cardDiv);
             $("<div>").attr({class: "ui star rating", "data-rating": [item.userRating]}).appendTo(ratingDiv);
-            const popup = $("<div>").attr("class", "ui popup").appendTo(cardDiv);
-            $("<div>").attr("class", "header").text("User Rating").appendTo(popup);
-            $("<div>").attr({class: "ui star rating", "data-rating": [item.userRating]}).appendTo(ratingDiv);
             const titleDiv = $("<div>").attr("class","content").appendTo(cardDiv);
             const postTitle = $("<a>").attr("class", "header").text(item.postTitle).appendTo(titleDiv);
                 cardDiv.click(function(){
@@ -45,6 +42,7 @@ $(document).ready(() => {
                     const searchId = $(this).attr("id");
                     searchOne(searchId);
                 });
+            $(document).ready(function () { $(".rating").rating(); });
           };
         })
         .catch(handleSearchErr);

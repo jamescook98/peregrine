@@ -150,7 +150,7 @@ function getRestaurant() {
       output += `
             <div class="row">
               <div class="col-md-4">
-              <img src="${reviews.user.image_url}" class="img-thumbnail">
+              <img src="${reviews.user.image_url}" class="img-thumbnail" width="250px">
               </div>
               <div class="col-md-8">
                 <a href=${reviews.user.profile_url} target="_blank"> User Yelp Profile</a>

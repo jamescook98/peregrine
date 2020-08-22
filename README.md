@@ -10,18 +10,18 @@ This application provides an insider's look at travel, helping people to find ni
 * [Installation](#Installation)
 * [Usage](#Usage)
 * [Technologies](#Technologies)
-* [Team Members](#Team Members)
+* [Team](#Team)
 # Installation
 Clone repository, then npm i
 # Usage
 nodemon server.js
 # Technologies
 Node, Express, MySQL, Sequelize, Yelp API, Heroku, MVC Framework, Semantic UI, Balsamiq wireframe
-# Team Members
-James Cook, https://github.com/jamescook98
-Nicole Graiff, https://github.com/keycole
-Conner Jarrell, https://github.com/ConnerJarrell
-Mike Lee, https://github.com/mikewclee
-Dominika Perkowska, https://github.com/domdotcom
-Margaret Seiche, https://github.com/margaretseiche
+# Team
+* James Cook, https://github.com/jamescook98
+* Nicole Graiff, https://github.com/keycole
+* Conner Jarrell, https://github.com/ConnerJarrell
+* Mike Lee, https://github.com/mikewclee
+* Dominika Perkowska, https://github.com/domdotcom
+* Margaret Seiche, https://github.com/margaretseiche
     

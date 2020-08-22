@@ -2,13 +2,24 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>User Reviews</title>
-    <link rel="stylesheet" href="https://bootswatch.com/4/cyborg/bootstrap.min.css">
-    <link rel="stylesheet" href="public/stylesheets/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Semantic -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <!-- Bulma -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+  
+    <!-- Stylesheet -->
+  <link rel="stylesheet" href="./stylesheets/style.css">
+    <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+  <script src="js/search.js"></script>
+  <title>Peregrine</title>
 </head>
 
-<body>
+<body class="indexBod">
   <div class="ui container">
     <button class="ui left floated inverted button">
       <a class="item" href="./index.html">Home</a>
@@ -21,25 +32,18 @@
     </button>
 
   </div>
-    <nav class="navbar navbar-default">
-        <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="index.html">User Reveiws</a>
-            </div>
-        </div>
-    </nav>
 
-    <div class="container">
-        <div id="restaurant" class="well"></div>
-    </div>
+  <div class="container" id="helpme">
+    <div id="restaurant" class="well"></div>
+  </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="/public/js/yelpAPI.js"></script>
-    <script>
-        getRestaurant();
-    </script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="js/yelpAPI.js"></script>
+  <script>
+    getRestaurant();
+  </script>
 </body>
 
 </html>

@@ -72,7 +72,7 @@ font-family: 'Raleway', sans-serif; */
 
 .ui.primary.button {
   margin-top: 20px;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
 }
 
 #yelp img, #yelp img{
@@ -83,6 +83,12 @@ font-family: 'Raleway', sans-serif; */
   display: block;
   margin-left: auto;
   margin-right: auto
+}
+
+#helpme {
+  margin-top: 150px;
+  margin-left: 300px;
+  margin-right: 250px;
 }
 
 #yelp .col-md-3 .well{

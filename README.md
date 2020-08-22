@@ -16,7 +16,7 @@ Clone repository, then npm i
 # Usage
 nodemon server.js
 # Technologies
-Node, Express, MySQL, Sequelize, Heroku, MVC Framework
+Node, Express, MySQL, Sequelize, Yelp API, Heroku, MVC Framework, Semantic UI, Balsamiq wireframe
 # Team Members
 James Cook, https://github.com/jamescook98
 Nicole Graiff, https://github.com/keycole

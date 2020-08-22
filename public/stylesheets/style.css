@@ -1,9 +1,9 @@
 form.signup,
 form.login {
-  margin-top: 50px;
+  margin-top: 100px;
 }
 .indexBod{
-  background: linear-gradient(to bottom, #339966 4%, #ccffcc 98%);
+  background: linear-gradient(#339966 4%, #ccffcc 98%);
 }
 .ui.container{
   margin-top:5px;
@@ -13,6 +13,9 @@ form.login {
   width: 50%;
   padding: 10px;
   text-align: center;
+}
+h15{
+  margin-top: 150px;
 }
 h5{
   font-family: 'Montserrat', sans-serif;
@@ -67,6 +70,10 @@ ui.large.grey.basic.button {
 /* font-family: 'Montserrat', sans-serif;
 font-family: 'Raleway', sans-serif; */
 
+.ui.primary.button {
+  margin-top: 20px;
+  margin-bottom: 150px;
+}
 
 #yelp img, #yelp img{
   width:auto;

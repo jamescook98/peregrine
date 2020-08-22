@@ -38,7 +38,7 @@ module.exports = (app) => {
             where: {
                 id: req.params.id
             },
-            include: [db.User]
+            //include: [db.User]
         })
             .then((dbPost) => {
                 res.json(dbPost);

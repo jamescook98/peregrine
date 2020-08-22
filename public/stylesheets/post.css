@@ -25,4 +25,19 @@ label {
 
 .ui.button {
     margin-top: 20px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    background-color: transparent;
+    border: 2px solid white;
+    width: 150px;
+    color: white;
+    font-size: large;
+}
+
+a{
+    color:white;
+}
+
+h2 {
+    font-size: 15px;
 }

@@ -159,15 +159,11 @@ function getRestaurant() {
                   <li class="list-group-item"><strong>time_created:</strong> ${reviews.time_created}</li>
                   <li class="list-group-item"><strong>Ratings:</strong> ${reviews.rating}</li>
                 </ul>
-              </div>
-            </div>
-            <div class="row">
-              <div class="well">
                 <h7>Reviews: </h7>
                 ${reviews.text}
-                <hr>
                 <a href=${reviews.url} target="_blank" class="btn btn-primary">View On Yelp</a>
                 <a href="index.html" class="btn btn-default">Go Back To Search</a>
+                <hr>
               </div>
             </div>
           `;

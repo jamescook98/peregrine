@@ -32,7 +32,7 @@ $(document).ready(() => {
               let item = response[i];
             const cardDiv = $("<div>").attr({class: "card", id : item.id}).appendTo("#peregrine-results");
             const cardImg = $("<div>").attr("class", "image").appendTo(cardDiv);
-            $("<img>").attr("src", item.imgFilepath).appendTo(cardImg);
+            $("<img>").attr({src: item.imgFilepath, onerror: "this.src='/images/placeholder.jpg'"}).appendTo(cardImg);
             const ratingDiv = $("<div>").attr("class", "extra").text("Rating").appendTo(cardDiv);
             $("<div>").attr({class: "ui star rating", "data-rating": [item.userRating]}).appendTo(ratingDiv);
             const titleDiv = $("<div>").attr("class","content").appendTo(cardDiv);
@@ -57,13 +57,14 @@ $(document).ready(() => {
       $.get(queryUrl)
         .then((res) => {
           console.log("The response is ", res);
+
           $("#main").empty();
           $("#peregrine-results").empty();
 
             const cardDiv = $("<div>").attr({class: "ui two column centered grid", id : res.id}).appendTo("#main");
             const celledList = $("<div>").attr("class", "ui very relaxed celled list").appendTo(cardDiv);
             const item = $("<div>").attr("class", "item").appendTo(celledList);
-            $("<img>").attr("src", res.imgFilepath).appendTo(item);
+            $("<img>").attr({src: res.imgFilepath, onerror: "this.src='/images/placeholder.jpg'"}).appendTo(item);
             const content = $("<div>").attr("class", "content").appendTo(item);
             const title = $("<div>").attr("class", "header").text(res.postTitle).appendTo(content);
             $("<div>").attr({class: "ui heart rating", "data-rating": res.userRating}).appendTo(title);

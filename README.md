@@ -12,11 +12,11 @@ This application provides an insider's look at travel, helping people to find ni
 * [Technologies](#Technologies)
 * [Team](#Team)
 # Installation
-Clone repository, then npm i
+Clone repository, then npm i for dependencies, and load schema.sql to MySQL 
 # Usage
-nodemon server.js
+nodemon server.js, create a user profile, login, create a post, and load seeds.sql to MySQL
 # Technologies
-Node, Express, MySQL, Sequelize, Yelp API, Heroku, MVC Framework, Semantic UI, Balsamiq wireframe
+Node, Express, MySQL, Sequelize, Yelp API, Heroku, MVC Framework, Semantic UI, Balsamiq wireframe, Postman testing
 # Team
 * James Cook, https://github.com/jamescook98
 * Nicole Graiff, https://github.com/keycole
